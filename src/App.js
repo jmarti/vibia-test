@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Redirect } from '@reach/router';
-import { Customize } from './views/customize/customize-page';
+import { Customize } from 'views/customize/customize-page';
 import './App.scss';
 
 function App() {
