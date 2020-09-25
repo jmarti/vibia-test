@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import customizeReducer from './customize.reducer';
+import customize from './customize.reducer';
 
 export default combineReducers({
-    customizeReducer
+    customize
 });

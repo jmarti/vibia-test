@@ -3,7 +3,8 @@ This is a Vibia test project.
 
 ## Some comments
 - Since it's a test, its size and functionality are minimal. But I wanted to implement a structure that fits in a larger project (how I hope it really is).
-- .env file is included in the repo. In "real life" this is a bad practice, but for testing purposes I think it's more practical to include it.
+- .env file is included in the repo. In *Real Life™* this is a bad practice, but for testing purposes I think it's more practical to include it.
+- Since the excercice specifies that the main component must implements React hooks, some state hooks have been added. In *Real Life™*,  the whole state can be managed using Redux.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
