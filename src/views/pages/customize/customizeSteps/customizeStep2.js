@@ -7,9 +7,11 @@ const CustomizeStep2 = (props) => {
     const { startPointSelected, onStartPointUnselection } = props;
 
     return (
-        <section>
-            <h1>Connect with each other</h1>
-            <p>Three sizes available: 1,5m., 2m. or 3m. which can be connected one to each other</p>
+        <section className="customize-step">
+            <header className="step-header">
+                <h1 className="title">Connect with each other</h1>
+                <p className="subtitle">Three sizes available: 1,5m., 2m. or 3m. which can be connected one to each other</p>
+            </header>
             <StartPointSelected
                 data={startPointSelected}
                 onUnselect={onStartPointUnselection} />

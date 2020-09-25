@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import StartPointOption from 'views/components/startPointOption/startPointOption.component';
+import Button from 'views/components/button/button.component';
 
 const CustomizeStep1 = (props) => {
     
@@ -18,21 +19,25 @@ const CustomizeStep1 = (props) => {
     };
 
     return (
-        <section>
-            <h1>Start point</h1>
-            <p>Choose the location for your electrical connection point</p>
-            <div>
+        <section className="customize-step">
+            <header className="step-header">
+                <h1 className="title">Start point</h1>
+                <p className="subtitle">Choose the location for your electrical connection point</p>
+            </header>
+            <div className="row mb-4">
                 { startPointOptions && startPointOptions.map(option => (
-                    <StartPointOption
-                        key={option.startPointsId}
-                        data={option}
-                        onChange={handleStartPointSelect} />
+                    <div className="col" key={option.startPointsId}>
+                        <StartPointOption
+                            data={option}
+                            onChange={handleStartPointSelect} />
+                    </div>
                 )) }
             </div>
-            <button
-                onClick={handleClick} 
-                disabled={!selectedOption}>
-                    Pasar al paso 2</button>
+            <Button
+                disabled={!selectedOption}
+                onClick={handleClick}>
+                Pasar al paso 2
+            </Button>
         </section>
     );
 };

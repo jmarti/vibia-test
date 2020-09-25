@@ -1,0 +1,60 @@
+.stepper {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: .5em 0 .75em;
+    border-bottom: 2px solid #bbb;
+    li {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        color: #888;
+        flex: 1;
+        &::before {
+            content: attr(data-step);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            width: 2em;
+            height: 2em;
+            background-color: #eee;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            line-height: 1;
+        }
+        &::after {
+            content: '';
+            height: 2px;
+            width: 100%;
+            flex: 1;
+            margin: 2px .5em 0;
+            background-color: #ddd;
+        }
+        span {
+            margin-left: .75em;
+            @media(max-width: 767px) {
+                display: none;
+            }
+        }
+        &.active {
+            color: inherit;
+            &::before {
+                background-color: #d0fb00;
+                border-color: #fff;
+            }
+            &::after {
+                background-color: #d0fb00;
+            }
+        }
+        &:last-of-type {
+            flex: .5;
+            @media(max-width: 768px) {
+                flex: 0;
+            }
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

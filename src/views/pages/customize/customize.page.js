@@ -3,10 +3,12 @@ import { connect, useSelector } from 'react-redux';
 
 import { customizeActions } from 'actions/customize.actions';
 
-import Steper from 'views/components/steper/steper.component';
+import Stepper from 'views/components/stepper/stepper.component';
+
 import CustomizeStep1 from './customizeSteps/customizeStep1';
 import CustomizeStep2 from './customizeSteps/customizeStep2';
 
+import './customizeSteps/customizeStep.scss';
 
 const Customize = (props) => {
     const { dispatch } = props;
@@ -17,7 +19,7 @@ const Customize = (props) => {
     const steps = useSelector(state => state.customize.formSteps);
     useEffect(() => {
         dispatch(customizeActions.listStartPoints());
-    }, []);
+    }, [dispatch]);
 
     const handleStartPointSelection = selectedStartPoint => {
         setStartPoint(selectedStartPoint);
@@ -29,8 +31,8 @@ const Customize = (props) => {
     }
     
     return (
-        <div>
-            <Steper steps={steps} activeStep={activeStep} />
+        <div className="container">
+            <Stepper steps={steps} activeStep={activeStep} />
 
             { !startPoint
                 ? <CustomizeStep1
