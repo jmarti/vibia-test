@@ -1,0 +1,45 @@
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    color: inherit;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+    &:disabled {
+        opacity: .4;
+    }
+}
+
+.btn-icon {
+    padding: .375rem;
+    line-height: 1;
+}
+
+.btn-primary {
+    color: #444;
+    background-color: #d0fb00;
+    border-color: #d0fb00;
+    &:disabled {
+        color: #444;
+        background-color: #d0fb00;
+        border-color: #d0fb00;
+    }
+}
+
+.btn-outline-primary {
+    color: #444;
+    border-color: #d0fb00;
+    &:hover {
+        background-color: #d0fb00;
+    }
+}
+

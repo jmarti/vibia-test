@@ -1,0 +1,41 @@
+.add-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #eee;
+    width: 15.09em;
+    height: 19.29em;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1.1rem;
+        left: 50%;
+        height: .9rem;
+        border: 1px dashed #aaa;
+        
+        @media(min-width: 576px) {
+            top: 50%;
+            left: -1.1rem;
+            width: .9rem;
+            height: auto;
+        }
+    }
+    .icon {
+        display: block;
+        border: 1px solid #444;
+        line-height: 1;
+        padding: .7788rem .849rem;
+        border-radius: 50%;
+        margin-bottom: .6rem;
+    }
+}
