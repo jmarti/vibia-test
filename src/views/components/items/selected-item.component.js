@@ -9,7 +9,7 @@ import './selected-item.component.scss';
 
 
 const SelectedItem = (props) => {
-    const { data, onUnselect } = props;
+    const { type, data, onUnselect } = props;
 
     const handleUnselect = e => {
         onUnselect();
@@ -17,7 +17,9 @@ const SelectedItem = (props) => {
 
     return (
         <article className="selected-item">
-            <span className="badge">Start point</span>
+            { type &&
+                <span className="badge">{type}</span>
+            }
             <ButtonIcon variant="outline" icon={faTrashAlt} onClick={handleUnselect}>
                 <FontAwesomeIcon icon={faTrashAlt} />
             </ButtonIcon>

@@ -16,6 +16,7 @@ const CustomizeStep2 = (props) => {
             <div className="row">
                 <div className="col-sm-auto mb-3">
                     <SelectedItem
+                        type="Start point"
                         data={startPointSelected}
                         onUnselect={onStartPointUnselection} />
                 </div>
