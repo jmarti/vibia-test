@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './startPointOption.scss';
+import './custom-radio.component.scss';
 
-const StartPointOption = (props) => {
+const CustomRadio = (props) => {
     const { data, onChange } = props;
 
     const handleChange = e => {
@@ -38,4 +38,4 @@ const StartPointOption = (props) => {
     );
 }
 
-export default StartPointOption;
+export default CustomRadio;

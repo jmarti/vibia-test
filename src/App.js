@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Redirect } from '@reach/router';
+
 import Customize from 'views/pages/customize/customize.page';
 import './App.scss';
 

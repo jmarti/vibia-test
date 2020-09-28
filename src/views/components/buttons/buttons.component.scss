@@ -16,18 +16,31 @@
         cursor: pointer;
     }
     &:disabled {
-        opacity: .65;
+        opacity: .4;
     }
 }
 
+.btn-icon {
+    padding: .375rem;
+    line-height: 1;
+}
+
 .btn-primary {
-    color: #212529;
+    color: #444;
     background-color: #d0fb00;
     border-color: #d0fb00;
     &:disabled {
-        color: #212529;
+        color: #444;
         background-color: #d0fb00;
         border-color: #d0fb00;
+    }
+}
+
+.btn-outline-primary {
+    color: #444;
+    border-color: #d0fb00;
+    &:hover {
+        background-color: #d0fb00;
     }
 }
 

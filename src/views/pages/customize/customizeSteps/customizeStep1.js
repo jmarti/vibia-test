@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import StartPointOption from 'views/components/startPointOption/startPointOption.component';
-import Button from 'views/components/button/button.component';
+import StartPointOption from 'views/components/forms/custom-radio.component';
+import LoadingItem from 'views/components/items/loading-item.component';
+import { Button } from 'views/components/buttons/buttons.component';
 
 const CustomizeStep1 = (props) => {
     
@@ -24,14 +25,18 @@ const CustomizeStep1 = (props) => {
                 <h1 className="title">Start point</h1>
                 <p className="subtitle">Choose the location for your electrical connection point</p>
             </header>
-            <div className="row mb-4">
-                { startPointOptions && startPointOptions.map(option => (
-                    <div className="col" key={option.startPointsId}>
-                        <StartPointOption
-                            data={option}
-                            onChange={handleStartPointSelect} />
-                    </div>
-                )) }
+            <div className="row">
+                { startPointOptions
+                    ? startPointOptions.map(option => (
+                        <div className="col-sm-auto mb-3" key={option.startPointsId}>
+                            <StartPointOption
+                                data={option}
+                                onChange={handleStartPointSelect} />
+                        </div> ))
+                    : <div className="col-sm-auto mb-3">
+                        <LoadingItem />
+                      </div>
+                }
             </div>
             <Button
                 disabled={!selectedOption}
