@@ -1,9 +1,11 @@
+import { handleResponse } from "utils/handleResponse";
+
 const getStartPoints = async () => {
-    const startPoints = await fetch(
+    const response = await fetch(
         `${process.env.REACT_APP_API_URL}/sr-products/sticks/startPoints`
     );
 
-    return startPoints.json();
+    return handleResponse(response);
 };
 
 const stickService = {
